@@ -444,14 +444,21 @@ dd {
 	margin: 0 1.5em 1.5em;
 }
 
-img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
-}
-
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
+}
+
+#pics img {
+	margin: auto;
+	padding: 20px;
+	display: inline;
+	width: 200px;
+	height: auto;
+}
+
+#pics {
+	text-align: center;
 }
 
 /*--------------------------------------------------------------

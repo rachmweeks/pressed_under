@@ -15,7 +15,11 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+		<div id="pics">
+			<img src="<?php bloginfo('stylesheet_directory');?>/img/nini.jpg" alt="cat">
+			<img src="<?php bloginfo('stylesheet_directory');?>/img/coffee.jpg" alt="coffee cup">
+			<img src="<?php bloginfo('stylesheet_directory');?>/img/hiro.jpg" alt="cat">
+		</div>	
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
