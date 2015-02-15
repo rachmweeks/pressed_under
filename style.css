@@ -376,9 +376,16 @@ big {
 	font-size: 125%;
 }
 
-main {
-	width: 80%;
-	float: left;
+article {
+	width: 60%;
+	max-width: 27.8125em;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 1.5em;
+}
+
+article h1 {
+	text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -396,6 +403,21 @@ html {
 
 body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+main {
+	width: 80%;
+	float: left;
+}
+
+entry-content {
+	margin: 5px auto;
+}
+
+aside {
+	width: 20%;
+	float: left;
+	padding-left: 2em;
 }
 
 blockquote:before,
