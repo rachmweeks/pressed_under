@@ -23,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 Normalize
+1.1 Utilities
 2.0 Typography
 3.0 Elements
 4.0 Forms
@@ -41,13 +42,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 12.0 Media
 	12.1 Captions
 	12.2 Galleries
+
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 1.0 Normalize
 --------------------------------------------------------------*/
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box; 
+}
+
 html {
-	font-family: sans-serif;
+	font-family: josefin-slab, sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -114,6 +122,7 @@ dfn {
 h1 {
 	font-size: 2em;
 	margin: 0.67em 0;
+	font-weight: normal;
 }
 
 mark {
@@ -263,6 +272,20 @@ th {
 }
 
 /*--------------------------------------------------------------
+1.1 Utilities
+--------------------------------------------------------------*/
+
+.invisible {
+	height: 1px;
+	width: 1px;
+	border: 0;
+	margin: -1px;
+	padding: 0;
+	position: absolute;
+	overflow: hidden;
+}
+
+/*--------------------------------------------------------------
 2.0 Typography
 --------------------------------------------------------------*/
 body,
@@ -270,10 +293,12 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-size: 16px;
-	font-size: 1rem;
-	line-height: 1.5;
+	font-family: merriweather, serif;
+	font-weight: 400;
+	max-width: 75em;
+	width: 90%;
+	margin-left:auto;
+	margin-right:auto;
 }
 
 h1,
@@ -285,8 +310,18 @@ h6 {
 	clear: both;
 }
 
+h1 {
+	font-family: josefin-slab, serif;
+	font-size: 3em;
+	text-align: center;
+}
+
 p {
 	margin-bottom: 1.5em;
+}
+
+nav {
+	font-family: merriweather, serif;
 }
 
 dfn,
@@ -339,6 +374,11 @@ ins {
 
 big {
 	font-size: 125%;
+}
+
+main {
+	width: 80%;
+	float: left;
 }
 
 /*--------------------------------------------------------------
@@ -495,16 +535,17 @@ textarea {
 --------------------------------------------------------------*/
 a {
 	color: royalblue;
+	text-decoration: none;
 }
 
 a:visited {
-	color: purple;
+	color: #333;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: #888;
 }
 
 a:focus {
@@ -519,109 +560,27 @@ a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+
+nav {
+	position: relative;
+	text-align: center;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 2em;
 }
 
-.main-navigation ul {
+nav ul {
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
+	padding: 0;
 }
 
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 1.5em;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul ul li {
-
-}
-
-.main-navigation li:hover > a {
-}
-
-.main-navigation ul ul :hover > a {
-}
-
-.main-navigation ul ul a:hover {
-}
-
-.main-navigation ul li:hover > ul {
-	left: auto;
-}
-
-.main-navigation ul ul li:hover > ul {
-	left: 100%;
-}
-
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
-}
-
-/* Small menu. */
-.menu-toggle {
-	display: none;
-}
-
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
-}
-
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
+nav ul li {
+	margin: 0;
+	display: inline;
+/*	float: left;*/
+	padding-left: 1em;
+	padding-right: 2em;
 }
 
 /*--------------------------------------------------------------
