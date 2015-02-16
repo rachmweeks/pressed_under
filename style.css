@@ -388,6 +388,15 @@ article h1 {
 	text-align: center;
 }
 
+.site-footer {
+	font-size: .8em;
+	text-align: center;
+	color: #666;
+	background-color: #eee;
+	padding: 20px;
+	margin: 0 0 0 40px;
+}
+
 /*--------------------------------------------------------------
 3.0 Elements
 --------------------------------------------------------------*/

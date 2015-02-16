@@ -12,9 +12,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'pressed_under' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'pressed_under' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'pressed_under' ), 'pressed_under', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			<p>Created by Rachel Weeks</p>
+			<p>Contact at 555-555-5555</p>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
